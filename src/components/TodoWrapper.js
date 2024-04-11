@@ -7,7 +7,7 @@ export const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
   return (
     <div className="TodoWrapper">
-     <TodoForm/>
+ <TodoForm addTodo={addTodo} />
     </div>
   )
 }
