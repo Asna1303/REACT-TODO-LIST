@@ -28,6 +28,14 @@ export const TodoWrapper = () => {
       )
     );
   }
+  const editTask = (task, id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
+
   return (
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
