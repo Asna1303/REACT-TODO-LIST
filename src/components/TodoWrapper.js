@@ -21,6 +21,13 @@ export const TodoWrapper = () => {
       )
     );
   }
+  const editTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+      )
+    );
+  }
   return (
     <div className="TodoWrapper">
       <h1>Get Things Done !</h1>
